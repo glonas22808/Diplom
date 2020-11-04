@@ -147,8 +147,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../knowledge" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sait" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -166,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604421223378</updated>
       <workItem from="1604421224515" duration="1217000" />
-      <workItem from="1604488926676" duration="6867000" />
+      <workItem from="1604488926676" duration="11664000" />
     </task>
     <servers />
   </component>
@@ -174,13 +175,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1604490186904">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1604501509842">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1604490186904" />
-    <state x="518" y="292" key="NewPhpFileDialog" timestamp="1604489281846">
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1604501509842" />
+    <state x="518" y="292" key="NewPhpFileDialog" timestamp="1604498617565">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="518" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1604489281846" />
+    <state x="518" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1604498617565" />
   </component>
 </project>

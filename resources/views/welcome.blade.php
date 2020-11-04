@@ -1,38 +1,44 @@
 @extends('Layout')
 @section('welcome')
-<div class="container-fluid">
-    <img class="d-block w-100" src="https://i.redd.it/k7oimxoqj9131.png" alt="Первый слайд">
-        <div class=" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" id="mainText">
-            <div class="shadow-sm mx-auto text-white"  id="mainText2" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><div class="blog-post">
-                    <h2 class="blog-post-title">Кинотеатр</h2>
-                    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-                    <hr>
-                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-                    <blockquote>
-                        <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </blockquote>
-                    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                    <h2>Heading</h2>
-                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    <h3>Sub-heading</h3>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <pre><code>Example code block</code></pre>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-                    <h3>Sub-heading</h3>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <ul>
-                        <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-                        <li>Donec id elit non mi porta gravida at eget metus.</li>
-                        <li>Nulla vitae elit libero, a pharetra augue.</li>
-                    </ul>
-                    <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-                    <ol>
-                        <li>Vestibulum id ligula porta felis euismod semper.</li>
-                        <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-                        <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-                    </ol>
-                    <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-                </div></div>
+
+    <img class="d-block "  src="https://i.redd.it/k7oimxoqj9131.png">
+    <div class="container-fluid justify-content-center" >
+{{--        <div class="row">--}}
+{{--                    <h2 class="blog-post-title">Кинотеатр</h2>--}}
+{{--                    <p>--}}
+{{--                        Ежедневно <span style="line-height: 1.5em;">без обеда и выходных в соответствии </span>с расписанием.<br>--}}
+{{--                        <br>--}}
+{{--                        <span style="background-color: initial;">Время работы касс:</span><br>--}}
+{{--                        <br>--}}
+{{--                        <span style="background-color: initial;">Кассы начинают работу за 30 минут до начала первого сеанса.</span><br>--}}
+{{--                        <br>--}}
+{{--                        <span style="background-color: initial;">Окончание работы касс: через 15 минут после начала последнего сеанса.</span></p>--}}
+{{--        </div>--}}
+{{--        <div class="row">--}}
+{{--                    <H3>Адрес : Баклановский 87</H3>--}}
+{{--                   <div class="justify-content-center" style="margin-bottom: 5rem ; margin-top: 3rem"> <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A38eb6aeb1f5fb51fe556ac017ac9ee9cda7b33ad6b396483cbeb072d76d76027&amp;width=600&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>--}}
+{{--                   </div>--}}
+{{--        </div>--}}
+        <div class="row featurette" style="margin-top: 3rem ; margin-bottom: 3rem">
+            <div class="featurette-item-block col-lg-7 col-md-12 col-sm-12 ">
+                <h2 class="featurette-heading">Кинотеатр</h2>
+                <p>
+                Ежедневно <span style="line-height: 1.5em;">без обеда и выходных в соответствии </span>с расписанием.<br>
+                            <br>
+                            <span style="background-color: initial;">Время работы касс:</span><br>
+                            <br>
+                            <span style="background-color: initial;">Кассы начинают работу за 30 минут до начала первого сеанса.</span><br>
+                            <br>
+                            <span style="background-color: initial;">Окончание работы касс: через 15 минут после начала последнего сеанса.</span><br>
+                <br>
+                   <span style="background-color: initial;">Адрес : Saint P</span>
+                </p>
+                </div>
+                    <div class=" featurette-item col-lg-5 col-md-12 col-sm-12 bg-black box-shadow mx-auto" style="width: 90%; height: 300px ; border-radius: 21px 21px 21px 21px;  margin-right: 2rem;">
+                                       <div style="margin-left: 2rem ; margin-top: 1.5rem;" > <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A38eb6aeb1f5fb51fe556ac017ac9ee9cda7b33ad6b396483cbeb072d76d76027&amp;width=475&amp;height=250&amp;lang=ru_RU&amp;scroll=true"></script>
+                                       </div>
+                </div>
+            </div>
         </div>
     </div>
-    @endsection
+        @endsection

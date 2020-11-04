@@ -24,14 +24,14 @@
     <script src="https://cdn.statically.io/gh/kswedberg/jquery-smooth-scroll/3948290d/jquery.smooth-scroll.min.js"></script>
     <title>Kino</title>
     <nav class="navbar navbar-expand-md navbar-dark   menu fixed-top ">
-        <a class="navbar-brand nav" href="#"> КиноГо</a>
+        <a class="navbar-brand nav" href="/"> КиноГо</a>
         <button class="navbar-toggler nav" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse mt-2 mt-md-0 menu" id="navbarCollapse">
             <ul class="navbar-nav nav mr-auto">
                 <li class="nav-item active nav">
-                    <a class="nav-link " href="#">Расписание <span class="sr-only">(current)</span></a>
+                    <a class="nav-link " href="timing">Расписание <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item nav">
                     <a class="nav-link" href="#">Личный кабинет</a>
@@ -42,6 +42,7 @@
 </head>
 <body>
     @yield('welcome')
+@yield('timing')
 </body>
 <footer class="container-fluid py-5 " >
     <div class="row">
