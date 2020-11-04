@@ -19,4 +19,9 @@ class TimingController extends Controller
         $filmList = isset($filmList[0]) ? $filmList : null;
         return view('timing', compact('filmList'));
     }
+    public function showFilm($id){
+        $film = new FilmModel();
+        $filmShow = $this->$film->getFilmById($id);
+        return view('filmpage', compact('filmShow'));
+    }
 }

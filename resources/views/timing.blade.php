@@ -3,7 +3,6 @@
     <div class="container-fluid">Здесь будет что-то вроде расписания</div>
     <div class="album py-5 bg-light">
         <div class="container">
-
             <div class="row">
                 @if(!empty($filmList))@foreach($filmList as $value)
                 <div class="col-md-4">
@@ -13,7 +12,7 @@
                             <p class="card-text text-white">{{$value->description}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                                    <a  href="{{route('showFilm',$value->id)}}" class="btn btn-sm btn-outline-secondary">Подробнее</a>
                                 </div>
                             </div>
                         </div>

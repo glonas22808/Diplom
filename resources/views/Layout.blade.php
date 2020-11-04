@@ -43,6 +43,7 @@
 <body>
     @yield('welcome')
 @yield('timing')
+@yield('filmpage')
 </body>
 <footer class="container-fluid py-5 " >
     <div class="row">

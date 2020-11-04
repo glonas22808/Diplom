@@ -13,4 +13,7 @@ class FilmModel extends Model
         'img',
         'video'
     ];
+    public function getFilmById($id){
+        return $this->where('id',$id)->get();
+    }
 }
