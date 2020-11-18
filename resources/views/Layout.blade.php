@@ -41,7 +41,7 @@
     </nav>
 </head>
 <body>
-    @yield('welcome')
+@yield('welcome')
 @yield('timing')
 @yield('filmpage')
 </body>

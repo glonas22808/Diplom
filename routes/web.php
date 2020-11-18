@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/timing','TimingController@index');
-Route::get('/filmpage','TimingController@showFilm')->name('showFilm');
+Route::get('/timing{id}','TimingController@showFilm')->name('showFilm');
+

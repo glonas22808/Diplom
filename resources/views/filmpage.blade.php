@@ -1,12 +1,21 @@
 @extends('Layout')
 @section('filmpage')
-    <div class="container-fluid" id ="Text" >
-        <div class="container row justify-content-center">
-            <div class="col-md-8 col-lg-9 blog-main ">
-                <h3 class="pb-3 mb-4">
-                    @foreach($filmShow as $value)
-                        {{$value->name}}</h3>
-                <img class="featurette-image img-fluid mx-auto"  style="width: 500px;" src="{{$item->img}}" data-holder-rendered="true">
-    {{$value->description}}
+    <div class= "container " id="Text">
+            <div class="row featurette">
+                @foreach($filmShow as $value)
+                    <div class="featurette-item-img col-lg-3 col-md-12 col-sm-12 order-md-first">
+                        <img class="featurette-image img-fluid mx-auto" style="width: 250px; " src="{{$value->film_img}}"
+                             data-holder-rendered="true">
+                    </div>
+                    <div class="featurette-item-block col-lg-5 col-md-12 col-sm-12 order-md-last">
+                        <h2 class="featurette-heading"> {{$value->film_name}}</h2>
+                        <hr class="featurette-divider">
+                        <h4>{{$value->genre_type}} </h4>
+                        <p>{{$value->film_discription}}</p>
+                    </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
     @endforeach
     @endsection
+

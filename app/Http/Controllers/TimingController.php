@@ -15,8 +15,7 @@ class TimingController extends Controller
     public function index()
     {
         $film = new FilmModel();
-        $filmList = $film::all();
-        $filmList = isset($filmList[0]) ? $filmList : null;
+        $filmList = $this->$film->Allfilm();
         return view('timing', compact('filmList'));
     }
     public function showFilm($id){
