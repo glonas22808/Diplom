@@ -10,7 +10,7 @@
                     <div class="featurette-item-block col-lg-5 col-md-12 col-sm-12 order-md-last">
                         <h2 class="featurette-heading"> {{$value->film_name}}</h2>
                         <hr class="featurette-divider">
-                        <h4>{{$value->genre_type}} </h4>
+                        <h4>{{$value->genre}} </h4>
                         <p>{{$value->film_discription}}</p>
                     </div>
         </div>
