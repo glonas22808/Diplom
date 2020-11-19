@@ -14,10 +14,18 @@ body {
 .navbar{
     background-color: #1b1e21;
 }
+#Seancecard ~ #Seancecard{
+    margin-left: 2rem;
+}
 footer{
     background-color: #1b1e21;
 }
 #Text{
     margin-top:  5rem;
-    margin-left: 15rem;
+}
+@media only screen and (min-width: 544px) {
+    #Text{
+
+        margin-left: 10rem;
+    }
 }

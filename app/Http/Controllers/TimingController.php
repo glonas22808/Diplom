@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\FilmModel;
+use App\SeanceModel;
 
 class TimingController extends Controller
 {
@@ -14,13 +15,17 @@ class TimingController extends Controller
     }
     public function index()
     {
+        //        $seance = new SeanceModel();
+//        $filmList = $seance->filmonshow();
         $film = new FilmModel();
         $filmList = $this->$film->Allfilm();
         return view('timing', compact('filmList'));
     }
     public function showFilm($id){
         $film = new FilmModel();
-        $filmShow = $this->$film->getFilmById($id);
-        return view('filmpage', compact('filmShow'));
+        $seance = new SeanceModel();
+        $filmShow = $film->getFilmById($id);
+        $seanceshow = $seance->Seanceshow($id);
+        return view('filmpage', compact('filmShow' , 'seanceshow'));
     }
 }
