@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/timing','TimingController@index');
+Route::post('/buyticket' , 'TicketController@buyTicket' );
 Route::get('/timing{id}','TimingController@showFilm')->name('showFilm');
 

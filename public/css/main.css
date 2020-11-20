@@ -14,7 +14,7 @@ body {
 .navbar{
     background-color: #1b1e21;
 }
-#Seancecard ~ #Seancecard{
+#Seancecard ~*{
     margin-left: 2rem;
 }
 footer{

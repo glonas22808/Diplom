@@ -13,15 +13,13 @@ class TimingController extends Controller
     {
         $this->$film = $film;
     }
-    public function index()
+    public function index() : object
     {
-        //        $seance = new SeanceModel();
-//        $filmList = $seance->filmonshow();
         $film = new FilmModel();
         $filmList = $this->$film->Allfilm();
         return view('timing', compact('filmList'));
     }
-    public function showFilm($id){
+    public function showFilm(string $id) : object{
         $film = new FilmModel();
         $seance = new SeanceModel();
         $filmShow = $film->getFilmById($id);
