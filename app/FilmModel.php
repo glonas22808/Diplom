@@ -15,7 +15,7 @@ class FilmModel extends Model
         'film_video',
         'film_time'
     ];
-    public function getFilmById(string $id) : object{
+    public function getFilmById(string $id) : object{ //Инфа по фильму
 
        $film = DB::table('film_genre')
            ->select('film.film_name',   'film.film_discription','film.film_img','film.film_video','film.film_time' ,DB::raw('group_concat(genre.genre_type) as genre'))
@@ -26,7 +26,7 @@ class FilmModel extends Model
             ->get();
        return $film;
     }
-    public function AllFilm() : object{
+    public function AllFilm() : object{ //Вывод на главную страницу фильм
         $mytime = \Carbon\Carbon::now();
         $film =  DB::table('film_genre' )
             ->select('film.film_name','film.film_id' ,'film.film_discription','film.film_img','film.film_video','film.film_time',DB::raw('group_concat(genre.genre_type) as genre') )
@@ -41,7 +41,6 @@ class FilmModel extends Model
             ->where('Seance.Seance_data' ,'>' ,  $mytime)
             ->distinct('film.film_name')
             ->get();
-
        return $users;
 
     }

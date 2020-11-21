@@ -13,17 +13,8 @@ class PlaceModel extends Model
         'row',
         'spot'
     ];
-    public function CheckPlace(object $request) : object{
-        $row = $request->get('place');
-        $spot = $request->get('spot');
-    $place =DB::table('place')
-        ->where('zal_id' , '=' , '0' )
-        ->Where('row' , '=' , $row)
-        ->Where('spot' , '=' , $spot)
-        ->get();
-    return $place;
-    }
-    public function ShowPlace(object $request) : object{ //Для разметки зала на стороне клиента
+
+    public function ShowPlaceSit(object $request) : object{ //Для разметки зала на стороне клиента
         $zal_id = $request->get('zal');
         $place =DB::table('place')
             ->where('zal_id', '=',$zal_id)

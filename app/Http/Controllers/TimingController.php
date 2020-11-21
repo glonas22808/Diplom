@@ -13,7 +13,7 @@ class TimingController extends Controller
     {
         $this->$film = $film;
     }
-    public function index() : object
+    public function index() : object //Выводит все фильмы
     {
         $film = new FilmModel();
         $filmList = $this->$film->Allfilm();

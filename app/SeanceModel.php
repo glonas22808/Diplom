@@ -13,8 +13,9 @@ class SeanceModel extends Model
         'Seance_time',
         'film_id',
         'zal_id',
+        'cost'
     ];
-    public function Seanceshow(string $id ) : object{
+    public function Seanceshow(string $id ) : object{ //Вывод существующего сеанса по фильму
         $mytime = \Carbon\Carbon::now();
         $seance = DB::table('seance')
             ->select(  'Seance.Seance_data', 'Zal.zal_name' )
@@ -25,22 +26,6 @@ class SeanceModel extends Model
             ->get();
         return $seance;
     }
-    public function filmonshow() : object{
-        $mytime = \Carbon\Carbon::now();
-        $seance = DB::table('seance')
-            ->select('film.film_name','film.film_id' ,'film.film_discription','film.film_img','film.film_video','film.film_time' )
-            ->join('film', 'Seance.film_id', '=', 'film.film_id')
-            ->join('zal', 'Seance.zal_id', '=', 'zal.zal_id')
-            ->where('Seance.Seance_data' ,'>' ,  $mytime)
-            ->groupBy('film.film_name', 'film.film_discription', 'film.film_id' ,'film.film_img','film.film_video','film.film_time');
-        $users = DB::table('film')
-            ->joinSub($seance, 'seance', function ($join) {
-                $join->on('film.film_id', '=', 'seance.film_id')
-                    ->join('film_genre', 'film_genre.film_id', '=', 'film.film_id')
-                    ->join('genre', 'film_genre.genre_id', '=', 'genre.genre_id') ;
-            })
-            ->get();
-        return $users;
-    }
+
 
 }
