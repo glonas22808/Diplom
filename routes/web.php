@@ -19,4 +19,5 @@ Route::get('/', function () {
 Route::get('/timing','TimingController@index');
 Route::post('/buyticket' , 'TicketController@buyTicket' );
 Route::get('/timing{id}','TimingController@showFilm')->name('showFilm');
-
+Route::post('/ShowPlace' , 'TicketController@ShowPlace');
+Route::post('/Showoccupied', 'TicketController@boughtTicket');

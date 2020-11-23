@@ -15,10 +15,11 @@ class SeanceModel extends Model
         'zal_id',
         'cost'
     ];
-    public function Seanceshow(string $id ) : object{ //Вывод существующего сеанса по фильму
+    //Вывод существующего сеанса по фильму
+    public function Seanceshow(string $id ) : object{
         $mytime = \Carbon\Carbon::now();
         $seance = DB::table('seance')
-            ->select(  'Seance.Seance_data', 'Zal.zal_name' )
+            ->select(  'Seance.Seance_data', 'Zal.zal_name' ,'Seance.cost' ,'Seance.zal_id' , 'Seance.seance_id' , 'seance.film_id' )
             ->join('film', 'Seance.film_id', '=', 'film.film_id')
             ->join('zal', 'Seance.zal_id', '=', 'zal.zal_id')
             ->where('film.film_id' ,$id)

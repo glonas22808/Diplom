@@ -14,16 +14,32 @@
                         </div>
                         <div class="modal-body">
                             <div class="order-md-2">
-                                <div class="form-group">
-                                    <label for="oldpassword">Место</label>
-                                    <input type="text" name="place" id="place" placeholder="Место"
-                                           class="form-control modal-field-phone" value="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="newpassword">Ряд</label>
-                                    <input type="text" name="spot" id="spot" placeholder="Ряд"
-                                           class="form-control modal-field-htoto" value="">
-                                </div>
+                                <table class="table table-sm">
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td>
+                                            <div>
+                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
+                                                       value="" aria-label="...">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
+                                                       value="" aria-label="...">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
+                                                       value="" aria-label="...">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
                             <button type="submit" class="btn btn-dark">Купить
                             </button>
@@ -58,9 +74,11 @@
                     <div class="next">
                         @foreach($seanceshow as $value)
                             <div class="list-group list-group-horizontal">
-                                <div class="card text-white bg-warning" id="Seancecard"
+                                <div class="card text-white bg-warning " data-cost=" {{$value->cost}} "
+                                     data-zal_id="{{$value->zal_id}}" data-seance_id="{{$value->seance_id}}"
+                                     data-film_id="{{$value->film_id}}" id="Seancecard"
                                      style="max-width: 7rem;  margin-top: 1rem;  max-height: 8rem;">
-                                    <div class="card-header">{{$value->zal_name}}</div>
+                                    <div class="card-header  ">{{$value->zal_name}}</div>
                                     <p class="card-text justify-content-center"> {{$value->Seance_data}}</p>
                                 </div>
                                 @endforeach
@@ -69,11 +87,56 @@
                 </div>
         </div>
     </div>
-</div>
+    </div>
     <script>
         $(document).ready(function () {
             $(document).on('click', '.card', function () {
                 $("#place").modal('show');
+                cost = $('#Seancecard').data('cost');
+                hall = $('#Seancecard').data('zal_id');
+                seance = $('#Seancecard').data('seance_id');
+                Film = $('#Seancecard').data('film_id');
+                $.ajax({
+                    url: '/ShowPlace',
+                    type: 'POST',
+                    data: {cost , hall , seance , Film},
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (response) {
+                        {
+
+                            if ('success' in response) {
+                                console.log('Super')
+
+                            } else {
+                                console.log('bad');
+                            }
+
+                        }
+                    }
+                });
+                $.ajax({
+                    url: '/Showoccupied',
+                    type: 'POST',
+                    data: {cost , hall , seance , Film},
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (response) {
+                        {
+
+                            if ('success' in response) {
+                                console.log('Super')
+
+                            } else {
+                                console.log('bad');
+                            }
+
+                        }
+                    }
+                });
+                //Вывести уже купленные билеты
             })
         })
         $(document).on('submit', '#buyplace', function (event) {
@@ -91,7 +154,7 @@
                         if ('success' in response) {
                             alert('Билет есть');
 
-                        } else  {
+                        } else {
                             alert('Билет отсутсвует ');
                         }
 

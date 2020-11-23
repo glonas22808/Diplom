@@ -15,11 +15,11 @@
       <change afterPath="$PROJECT_DIR$/../knowledge/app/Models/TestModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/FilmModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FilmModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TimingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TimingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/PlaceModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/PlaceModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/SeanceModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/SeanceModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/TicketModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TicketModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/filmpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/filmpage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +154,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../knowledge" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -181,7 +181,9 @@
       <workItem from="1605717102689" duration="1824000" />
       <workItem from="1605771839760" duration="18648000" />
       <workItem from="1605860886183" duration="15475000" />
-      <workItem from="1605951175638" duration="4500000" />
+      <workItem from="1605951175638" duration="4593000" />
+      <workItem from="1606037243359" duration="6727000" />
+      <workItem from="1606113984059" duration="5331000" />
     </task>
     <servers />
   </component>
@@ -193,17 +195,17 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605888546730" />
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1605801539840">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1606114497361">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605801539840" />
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606114497361" />
     <state x="518" y="292" key="NewPhpFileDialog" timestamp="1604508322916">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="518" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1604508322916" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1605774457083">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1606043682955">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1605774457083" />
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1606043682955" />
   </component>
 </project>

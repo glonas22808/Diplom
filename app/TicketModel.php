@@ -16,13 +16,13 @@ class TicketModel extends Model
         'film_id',
         'cost'
     ];
-    public function checkthebilet(object $request) : object{ //Купленны билеты
-        $place_id = $request->get('place_id');
-        $Seance_id = $request->get('Seance_id');
+
+    //Купленны билеты
+    public function checkthebilet(object $request) : object{
+        $SeanceId = $request->get('seance');
         $ticket = DB::table('seance_zal')
             ->where('status_place' , '=', '1')
-            ->where('place_id' , '=' , $place_id)
-            ->where('Seance_id' , '=' , $Seance_id)
+            ->where('Seance_id' , '=' , $SeanceId)
             ->get();
         return $ticket;
     }

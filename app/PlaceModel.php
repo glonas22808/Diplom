@@ -14,11 +14,13 @@ class PlaceModel extends Model
         'spot'
     ];
 
-    public function ShowPlaceSit(object $request) : object{ //Для разметки зала на стороне клиента
-        $zal_id = $request->get('zal');
+    //Для разметки зала на стороне клиента
+    public function ShowPlaceSit(object $request) : object{
+        $zalId = $request->get('hall');
         $place =DB::table('place')
-            ->where('zal_id', '=',$zal_id)
+            ->where('zal_id', '=',$zalId)
             ->get();
         return $place;
+
     }
 }
