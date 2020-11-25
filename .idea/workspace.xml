@@ -14,12 +14,8 @@
       <change afterPath="$PROJECT_DIR$/../knowledge/.idea/b.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../knowledge/app/Models/TestModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/FilmModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FilmModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/PlaceModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/PlaceModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/SeanceModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/SeanceModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TicketModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TicketModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/filmpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/filmpage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +155,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="open Php" />
+      <command value="open knowledge" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -184,6 +186,12 @@
       <workItem from="1605951175638" duration="4593000" />
       <workItem from="1606037243359" duration="6727000" />
       <workItem from="1606113984059" duration="5331000" />
+      <workItem from="1606203408814" duration="13369000" />
+      <workItem from="1606225745099" duration="1532000" />
+      <workItem from="1606227452607" duration="1673000" />
+      <workItem from="1606231995903" duration="614000" />
+      <workItem from="1606289430630" duration="126000" />
+      <workItem from="1606296316413" duration="14583000" />
     </task>
     <servers />
   </component>
@@ -195,17 +203,17 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605888546730" />
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1606114497361">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1606228474702">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606114497361" />
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606228474702" />
     <state x="518" y="292" key="NewPhpFileDialog" timestamp="1604508322916">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="518" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1604508322916" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1606043682955">
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1606311870571">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1606043682955" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1606311870571" />
   </component>
 </project>

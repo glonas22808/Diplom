@@ -16,28 +16,7 @@
                             <div class="order-md-2">
                                 <table class="table table-sm">
                                     <tbody>
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>
-                                            <div>
-                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                       value="" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                       value="" aria-label="...">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel"
-                                                       value="" aria-label="...">
-                                            </div>
-                                        </td>
-                                    </tr>
-
+{{--                                    //Таблица сама создается--}}
                                     </tbody>
                                 </table>
                             </div>
@@ -99,27 +78,56 @@
                 $.ajax({
                     url: '/ShowPlace',
                     type: 'POST',
-                    data: {cost , hall , seance , Film},
+                    data: {cost, hall, seance, Film},
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     success: function (response) {
-                        {
+                        Object.keys(response.place).forEach((key) => {
+                            $('tbody').append('<tr>')
+                            $('tbody').append('<th scope="row"> ' + key + '</th>')
+                            response.place[key].forEach((elem) => {
+                                $('tbody').append('                                        <td>\n' +
+                                    '                                            <div>\n' +
+                                    '                                                <input class="form-check-input" type="checkbox" id="'+elem.place_id+'"\n' +
+                                    '                                                       data-place="' + elem.place_id + '" data-cost="' + cost + '" name="place" aria-label="...">\n' +
+                                    '                                            </div>\n' +
+                                    '                                        </td>')
+                            })
+                            $('tbody').append('</tr>')
 
-                            if ('success' in response) {
-                                console.log('Super')
-
-                            } else {
-                                console.log('bad');
-                            }
-
-                        }
+                        })
                     }
-                });
+                })
                 $.ajax({
                     url: '/Showoccupied',
                     type: 'POST',
-                    data: {cost , hall , seance , Film},
+                    data: {cost, hall, seance, Film},
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (response) {
+                        {
+                        console.log()
+                         $(' #'+response.occupied[0].place_id +' ').append('class = disabled');
+
+                        }
+                    }
+                })
+                //Вывести уже купленные билеты
+            })
+
+            $(document).on('submit', '#buyplace', function (event) {
+                event.preventDefault();
+                cost = $('#buyplace').data('cost');
+                place = $('#buyplace').data('place');
+                console.log(cost);
+                console.log(place);
+                console.log(typeof   $('#buyplace').serialize())
+                $.ajax({
+                    url: '/buyticket',
+                    type: 'POST',
+                     data: {cost ,place  } ,
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
@@ -127,40 +135,16 @@
                         {
 
                             if ('success' in response) {
-                                console.log('Super')
+                                alert('Билет есть');
 
                             } else {
-                                console.log('bad');
+                                alert('Билет отсутсвует ');
                             }
 
                         }
                     }
-                });
-                //Вывести уже купленные билеты
+                })
             })
-        })
-        $(document).on('submit', '#buyplace', function (event) {
-            event.preventDefault();
-            $.ajax({
-                url: '/buyticket',
-                type: 'POST',
-                data: $('#buyplace').serialize(),
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                success: function (response) {
-                    {
-
-                        if ('success' in response) {
-                            alert('Билет есть');
-
-                        } else {
-                            alert('Билет отсутсвует ');
-                        }
-
-                    }
-                }
-            });
         })
     </script>
 @endsection
