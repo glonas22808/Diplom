@@ -14,7 +14,6 @@
       <change afterPath="$PROJECT_DIR$/../knowledge/.idea/b.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../knowledge/app/Models/TestModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/filmpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/filmpage.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +190,8 @@
       <workItem from="1606227452607" duration="1673000" />
       <workItem from="1606231995903" duration="614000" />
       <workItem from="1606289430630" duration="126000" />
-      <workItem from="1606296316413" duration="14583000" />
+      <workItem from="1606296316413" duration="14669000" />
+      <workItem from="1606375789728" duration="3157000" />
     </task>
     <servers />
   </component>
@@ -211,9 +211,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="518" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1604508322916" />
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1606311870571">
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1606377421108">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1606311870571" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1606377421108" />
   </component>
 </project>

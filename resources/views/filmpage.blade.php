@@ -75,6 +75,7 @@
                 hall = $('#Seancecard').data('zal_id');
                 seance = $('#Seancecard').data('seance_id');
                 Film = $('#Seancecard').data('film_id');
+                $('tbody').empty();
                 $.ajax({
                     url: '/ShowPlace',
                     type: 'POST',
@@ -90,44 +91,29 @@
                                 $('tbody').append('                                        <td>\n' +
                                     '                                            <div>\n' +
                                     '                                                <input class="form-check-input" type="checkbox" id="'+elem.place_id+'"\n' +
-                                    '                                                       data-place="' + elem.place_id + '" data-cost="' + cost + '" name="place" aria-label="...">\n' +
+                                    '                                                       value="' + elem.place_id + '" data-cost="' + cost + '" name="place"  aria-label="...">\n' +
                                     '                                            </div>\n' +
                                     '                                        </td>')
                             })
                             $('tbody').append('</tr>')
-
                         })
-                    }
-                })
-                $.ajax({
-                    url: '/Showoccupied',
-                    type: 'POST',
-                    data: {cost, hall, seance, Film},
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    success: function (response) {
-                        {
-                        console.log()
-                         $(' #'+response.occupied[0].place_id +' ').append('class = disabled');
-
+                        for ( i= 0 ; i <response.occupied.length ; i++) {
+                            $(' #' + response.occupied[i].place_id + ' ').replaceWith('<input class="form-check-input" id="'+response.occupied[i].place_id+'"  type="checkbox" disabled>');
                         }
                     }
-                })
-                //Вывести уже купленные билеты
+                });
             })
-
             $(document).on('submit', '#buyplace', function (event) {
                 event.preventDefault();
-                cost = $('#buyplace').data('cost');
-                place = $('#buyplace').data('place');
-                console.log(cost);
-                console.log(place);
-                console.log(typeof   $('#buyplace').serialize())
+                cost = $('#Seancecard').data('cost');
+                hall = $('#Seancecard').data('zal_id');
+                seance = $('#Seancecard').data('seance_id');
+                Film = $('#Seancecard').data('film_id');
+                place =  $('#buyplace').serialize();
                 $.ajax({
                     url: '/buyticket',
                     type: 'POST',
-                     data: {cost ,place  } ,
+                     data: {cost ,place , hall ,seance , Film} ,
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
